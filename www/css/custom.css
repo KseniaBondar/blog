@@ -1,0 +1,5 @@
+header#header {
+	padding: 30px;
+	background-color: #ccc;
+	overflow: auto;
+}
