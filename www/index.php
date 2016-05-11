@@ -1,5 +1,6 @@
 <?php
     //  вся процедура работает на сессиях. Именно в ней хранятся данные  пользователя, пока он находится на сайте. Очень важно запустить их в  самом начале странички!!!
+    header('Content-Type: text/html; charset=utf-8');
     session_start();
     ?>
 <!DOCTYPE html>
@@ -28,7 +29,7 @@
     <!-- Start header -->
     <header id="header">
       <div class="col-sm-7 col-xs-12">
-        <form class="form-inline" action="/php/testreg.php" method="post">
+        <form class="form-inline" action="/php/login.php" method="post">
 
           <div class="form-group">
             <label class="sr-only" for="exampleInputPassword2">Пароль</label>
@@ -48,14 +49,13 @@
       <div class="col-sm-5 col-xs-12">
         <?php
         // Проверяем, пусты ли переменные логина и id пользователя
-        var_dump($_SESSION);
         if (empty($_SESSION['k_login'])){
           // Если пусты, то мы не выводим ссылку
-          echo "Вы вошли на сайт, как гость<br><a href='#'>Эта ссылка  доступна только зарегистрированным пользователям</a>";
+          echo "Вы вошли на сайт, как гость<br>";
         }
         else{
         // Если не пусты, то мы выводим ссылку
-          echo "Вы вошли на сайт, как ".$_SESSION['k_login']."<br><a  href='/'>Эта ссылка доступна только  зарегистрированным пользователям</a>";
+          echo "Вы вошли на сайт, как ".$_SESSION['k_login']."<br>";
         }
         ?>
       </div>

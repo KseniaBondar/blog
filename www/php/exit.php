@@ -1,12 +1,9 @@
 <?php
-	session_start();
-	var_dump($_SESSION);
-	//unset($_SESSION['k_login']);
-	//unset($_SESSION['k_id']);
+session_start();
 
-	//session_unset();
-	//session_destroy();
+unset($_SESSION['k_login']);
+unset($_SESSION['k_id']);
 
-	//header("Location: /");
-	//exit();
+header("Location: /");
+exit();
 ?>
