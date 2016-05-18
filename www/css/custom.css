@@ -3,3 +3,8 @@ header#header {
 	background-color: #ccc;
 	overflow: auto;
 }
+
+.login-empty-error,
+.login-error{
+    display: none;
+}

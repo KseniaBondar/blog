@@ -34,7 +34,7 @@ session_start();
 <!-- Start header -->
 <header id="header">
     <div class="col-sm-7 col-xs-12">
-        <form class="form-inline" action="/php/login.php" method="post">
+        <form id="login-form" class="form-inline">
 
             <div class="form-group">
                 <label class="sr-only" for="exampleInputPassword2">Пароль</label>
@@ -50,6 +50,8 @@ session_start();
             <a href="/php/reg.php">Зарегистрироваться</a>
 
         </form>
+        <div class="bg-warning login-empty-error">Нужно заполнить все поля.</div>
+        <div class="bg-warning login-error">Введенный вами логин или пароль неверный.</div>
     </div>
     <div class="col-sm-5 col-xs-12">
         <?php
